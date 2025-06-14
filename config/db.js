@@ -6,7 +6,7 @@ const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialectOptions: {
     ssl: {
       // สำคัญมากสำหรับ Supabase เนื่องจากต้องใช้ SSL/TLS
-      require: true,
+      require: false,
       rejectUnauthorized: false, // ในบางสภาพแวดล้อม dev อาจจำเป็นต้องตั้งค่านี้,
       // แต่ใน Production ควรตรวจสอบใบรับรองให้ถูกต้อง
     },
